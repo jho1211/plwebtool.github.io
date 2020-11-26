@@ -8,6 +8,11 @@ async function getData(url){
 async function runTool(fasta, numTRFs, genome, outputid){
   var input = document.getElementById(fasta).value;
   var refFileName = document.getElementById(genome).value;
+  var max = parseInt(document.getElementById(numTRFs).value);
+
+  if (max == -1 || max == 0 || isNaN(max)){
+    max = Infinity;
+  }
 
   try{
     var fileName = document.getElementById(genome).value;
@@ -19,7 +24,7 @@ async function runTool(fasta, numTRFs, genome, outputid){
     alert('Species not implemented yet.');
   }
 
-  var output = findTRFs(input, ref)
+  var output = findTRFs(input, ref, max)
 
   document.getElementById(outputid).value = output;
 }
@@ -109,7 +114,7 @@ function searchRef(seq, ref){
   var refDescs = evenArray(refArray);
   var refSeqs = oddArray(refArray);
 
-  for (i = 0; i < refSeqs.length; i++){
+  for (var i = 0; i < refSeqs.length; i++){
     if (refSeqs[i].includes(seq)){
       return trfName(refDescs[i]);
     }
@@ -121,7 +126,7 @@ function searchRef(seq, ref){
 function isTRF(seq, ref){
   var subseqs = generateSubsequences(seq)
 
-  for (i = 0; i < subseqs.length; i++){
+  for (var i = 0; i < subseqs.length; i++){
     var result = searchRef(subseqs[i], ref);
 
     if (typeof(result) == "string"){
@@ -132,16 +137,22 @@ function isTRF(seq, ref){
   return false;
 }
 
-function findTRFs(fasta, ref){
+function findTRFs(fasta, ref, limit){
   var fastaArray = fasta.split('\n');
 
   var descs = evenArray(fastaArray);
   var seqs = oddArray(fastaArray);
 
-  var newFastaArray = []
+  var newFastaArray = [];
 
-  for (i = 0; i < seqs.length; i++){
-    var result = isTRF(seqs[i], ref)
+  for (var i = 0; i < seqs.length; i++){
+
+    if ((newFastaArray.length / 2) == limit){
+      return newFastaArray.join('\n');
+    }
+
+    var result = isTRF(seqs[i], ref);
+
 
     if (typeof(result) == "string"){
       newFastaArray.push(descs[i] + ' (' + result + ' )');
