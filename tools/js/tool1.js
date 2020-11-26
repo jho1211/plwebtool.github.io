@@ -5,7 +5,7 @@ function runTool(fasta, numTRFs, genome){
   try{
     var fileName = document.getElementById(genome).value;
     var fileToRead = fetch('db/' + fileName + '.txt')
-    console.log(fileToRead);
+    console.log(fileToRead.text());
   }
   catch(err){
     console.log(err);
