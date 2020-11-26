@@ -4,8 +4,9 @@ function runTool(fasta, numTRFs, genome){
 
   try{
     var fileName = document.getElementById(genome).value;
-    var fileToRead = fetch('db/' + fileName + '.txt')
-    console.log(fileToRead.text);
+    fetch('https://plwebtool.github.io/tools/db/ecoli-tRNA-db.txt')
+      .then(response => response.text())
+      .then(text => console.log(text))
   }
   catch(err){
     console.log(err);
