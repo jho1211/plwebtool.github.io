@@ -25,9 +25,9 @@ async function runTool(fasta, limit, outputid){
     max = Infinity;
   }
 
-  var reference = await getData('https://plwebtool.github.io/tools/db/ribo58s.fa');
+  reference = await getData('https://plwebtool.github.io/tools/db/ribo58s.fa');
 
-  var output = generateDRNA(input, ref, max)
+  var output = generateDRNA(input, max)
 
   if (document.getElementById('successAlert').hasAttribute('hidden')){
     document.getElementById('successAlert').removeAttribute('hidden');
@@ -41,10 +41,10 @@ function isDRNA(seq, ref){
   Returns the matching sequence if it is a match */
 
   if (seq.length == 12){
-    return ref.contains(seq);
+    return ref.includes(seq);
   }
   else if (seq.length == 13 && seq[0] == "C"){
-    return ref.contains(seq);
+    return ref.includes(seq);
   }
   else{
     return false;
@@ -70,5 +70,5 @@ function generateDRNA(input, max){
     }
   }
 
-  return dArray;
+  return dArray.join('\n');
 }
