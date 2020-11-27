@@ -14,11 +14,11 @@
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <a href="../index.html" class="navbar-brand">PL</a>
-      <button class="navbar-toggler" data-toggle="collapse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a href="../aboutus.html" class="nav-link disabled">About Us</a></li>
           <li class="nav-item dropdown">
@@ -70,7 +70,7 @@
       </div>
 
       <!-- The button used to erase all text -->
-      <button onclick="clearInput('fastaInput')">Clear</button>
+      <button class="btn btn-outline-dark" onclick="clearInput('fastaInput')">Clear</button>
     </div>
 
     <div class="col-sm-4 my-auto">
@@ -86,7 +86,7 @@
         <textarea readonly class="form-control" id="fastaOutput" rows="10"></textarea>
       </div>
 
-      <button onclick="copyOutput('fastaOutput')">Copy Output</button>
+      <button class="btn btn-outline-dark" onclick="copyOutput('fastaOutput')">Copy Output</button>
     </div>
 
   </div>
