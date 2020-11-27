@@ -18,7 +18,7 @@ async function runTool(fasta, numTRFs, genome, outputid){
     var fileName = document.getElementById(genome).value;
     var ref;
 
-    ref = await getData('https://plwebtool.github.io/tools/db/' + fileName + '.txt');
+    ref = await getData('https://plwebtool.github.io/tools/db/' + fileName);
   }
   catch(err){
     alert('Species not implemented yet.');
@@ -57,32 +57,14 @@ function binarySearch(seq, ref){
 }
 */
 
-function oddArray(arr){
-  // Returns the odd numbered index elements
+function nthElements(arr, start, step){
   var newArr = [];
 
-  for (i = 0; i < arr.length; i++){
-
-    if ((i % 2) == 1){
-      newArr.push(arr[i]);
-    }
+  for (var i = start; i < arr.length; i += step){
+    newArr.push(arr[i]);
   }
 
-  return newArr
-}
-
-function evenArray(arr){
-  // Returns the even numbered index elements
-  var newArr = [];
-
-  for (i = 0; i < arr.length; i++){
-
-    if ((i % 2) == 0){
-      newArr.push(arr[i]);
-    }
-  }
-
-  return newArr
+  return newArr;
 }
 
 function generateSubsequences(seq){
@@ -97,13 +79,11 @@ function generateSubsequences(seq){
 
 function trfName(desc){
 
+  start = desc.indexOf('tRNA');
+  end = desc.indexOf(' ');
+
   // Returns the name of the tRF the sequence corresponds to
-  if (desc[11] == '-'){
-      return desc.slice(3, 11)
-      }
-    else{
-      return desc.slice(3, 12);
-    }
+  return desc.slice(start, end)
 }
 
 function searchRef(seq, ref){
@@ -111,8 +91,8 @@ function searchRef(seq, ref){
      Return the name of the tRF it corresponds to if found */
 
   var refArray = ref.split('\n');
-  var refDescs = evenArray(refArray);
-  var refSeqs = oddArray(refArray);
+  var refDescs = nthElements(refArray, 0, 2);
+  var refSeqs = nthElements(refArray, 1, 2);
 
   for (var i = 0; i < refSeqs.length; i++){
     if (refSeqs[i].includes(seq)){
@@ -140,8 +120,8 @@ function isTRF(seq, ref){
 function findTRFs(fasta, ref, limit){
   var fastaArray = fasta.split('\n');
 
-  var descs = evenArray(fastaArray);
-  var seqs = oddArray(fastaArray);
+  var descs = nthElements(fastaArray, 0, 2);
+  var seqs = nthElements(fastaArray, 1, 2);
 
   var newFastaArray = [];
 
