@@ -6,3 +6,7 @@ function copyOutput(id){
 function clearInput(id){
   document.getElementById(id).value = "";
 }
+
+function hideAlert(id){
+  document.getElementById(id).setAttribute('hidden', 'true')
+}

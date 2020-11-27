@@ -23,8 +23,12 @@ async function runTool(fasta, numTRFs, genome, outputid){
   catch(err){
     alert('Species not implemented yet.');
   }
-
+  
   var output = findTRFs(input, ref, max)
+
+  if (document.getElementById('successAlert').hasAttribute('hidden')){
+    document.getElementById('successAlert').removeAttribute('hidden');
+  }
 
   document.getElementById(outputid).value = output;
 }
