@@ -1,92 +1,96 @@
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ala-GGC-1-1 (tRNAscan-SE ID: chr.trna30) Ala (GGC) 76 bp mature sequence Sc: 73.0 chr:2015853-2015928 (-)
-GGGGTTATAGCTCAGCTGGGAGAGCGCTTGCATGGCATGCAAGAGGTCGGCGGTTCGATCCCGCCTAGCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ala-TGC-1-1 (tRNAscan-SE ID: chr.trna2) Ala (TGC) 76 bp mature sequence Sc: 79.2 chr:365631-365706 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ala-GGC-1-1 (tRNAscan-SE ID: chr.trna30) Ala (GGC) 77 bp Sc: 67.2 chr:2177769-2177845 (-)
+GGGGTTTATAGCTCAGCTGGGAGAGCGCTTGCATGGCATGCAAGAGGTCGGCGGTTCGATCCCGCCTAGCTCCACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ala-TGC-1-1 (tRNAscan-SE ID: chr.trna3) Ala (TGC) 76 bp Sc: 79.2 chr:410560-410635 (+)
 GGGGTCGTAGCTCAGCTGGGAGAGCACCTGCCTTGCACGCAGGGGGTCAGGAGTTCGATCCTCCTCGGCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ala-TGC-1-2 (tRNAscan-SE ID: chr.trna9) Ala (TGC) 76 bp mature sequence Sc: 79.2 chr:613991-614066 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ala-TGC-1-2 (tRNAscan-SE ID: chr.trna23) Ala (TGC) 76 bp Sc: 79.2 chr:3214457-3214532 (-)
 GGGGTCGTAGCTCAGCTGGGAGAGCACCTGCCTTGCACGCAGGGGGTCAGGAGTTCGATCCTCCTCGGCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ala-TGC-1-3 (tRNAscan-SE ID: chr.trna23) Ala (TGC) 76 bp mature sequence Sc: 79.2 chr:3061661-3061736 (-)
-GGGGTCGTAGCTCAGCTGGGAGAGCACCTGCCTTGCACGCAGGGGGTCAGGAGTTCGATCCTCCTCGGCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Arg-ACG-1-1 (tRNAscan-SE ID: chr.trna12) Arg (ACG) 77 bp mature sequence Sc: 84.1 chr:1683244-1683320 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Arg-ACG-1-1 (tRNAscan-SE ID: chr.trna13) Arg (ACG) 77 bp Sc: 84.1 chr:1829140-1829216 (+)
 GCGCCCGTAGCTCAGTTGGATAGAGTATCTGGCTACGAACCAGGGGGTCGGAGGTTCGAATCCTTCCGGGCGCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Arg-CCT-1-1 (tRNAscan-SE ID: chr.trna40) Arg (CCT) 77 bp mature sequence Sc: 72.7 chr:1317124-1317200 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Arg-CCT-1-1 (tRNAscan-SE ID: chr.trna40) Arg (CCT) 77 bp Sc: 72.7 chr:1478913-1478989 (-)
 GTCCCGGTGGCACAGATGGATAGCGCAGCCCCCTCCTAAGGGGCAGGTCGCAGGTTCGAATCCTGCCCGGGACGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Arg-TCG-1-1 (tRNAscan-SE ID: chr.trna16) Arg (TCG) 77 bp mature sequence Sc: 81.8 chr:2213188-2213264 (+)
-GCGCTCGTAGCTCAGCTGGATAGAGTACTTGGCTTCGAACCAAGGTGTCGGGGGTTCGAGTCCCTCCGAGCGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Arg-TCG-2-1 (tRNAscan-SE ID: chr.trna18) Arg (TCG) 71 bp mature sequence Sc: 24.4 chr:2322881-2322951 (+)
-CAATGAGTTAATTTTAAATTACCGGGCTTCGAACCAAGGTGTCGGGGGTTCGAGTCCCTCCGAGCGCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Arg-TCT-1-1 (tRNAscan-SE ID: chr.trna34) Arg (TCT) 77 bp mature sequence Sc: 84.0 chr:2003027-2003103 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Arg-TCG-1-1 (tRNAscan-SE ID: chr.trna18) Arg (TCG) 77 bp Sc: 81.0 chr:2401836-2401912 (+)
+GCGCTCGTAGCTCAGCTGGATAGAGTACTTGGCTTCGAACCAAGGTGTCGGGGGTTCGAGTCCCTCCGAGCGCGCCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Arg-TCT-1-1 (tRNAscan-SE ID: chr.trna34) Arg (TCT) 77 bp Sc: 84.0 chr:2161339-2161415 (-)
 GCGCCCGTAGCTCATCTGGATAGAGCATCGGCCTTCTAAGCCGAGGGTAGCAGGTTCGAATCCTGCCGGGCGCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Asn-GTT-1-1 (tRNAscan-SE ID: chr.trna46) Asn (GTT) 76 bp mature sequence Sc: 82.6 chr:76854-76929 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Asn-GTT-1-1 (tRNAscan-SE ID: chr.trna47) Asn (GTT) 76 bp Sc: 82.6 chr:87993-88068 (-)
 TCCCCGGTAGCTCAGTCGGTAGAGCGGATGACTGTTAATCATTAGGTCACAAGTTCGAGTCTTGTCCGGGGAGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Asp-GTC-1-1 (tRNAscan-SE ID: chr.trna38) Asp (GTC) 77 bp mature sequence Sc: 87.4 chr:1995931-1996007 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Asn-GTT-2-1 (tRNAscan-SE ID: chr.trna48) Asn (GTT) 83 bp Sc: 30.9 chr:81927-82009 (-)
+AAATTAATTGATATTGTTTGAAATTGAATATTATTTGACTGTTAATCATTAGGTCACAAGTTCGAGTCTTGTCCGGGGAGCCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Asp-GTC-1-1 (tRNAscan-SE ID: chr.trna38) Asp (GTC) 77 bp Sc: 87.4 chr:2154248-2154324 (-)
 GGAGTGGTAGTTCAGTTGGTCAGAATACCGGCCTGTCACGCCGGGGGTCGCGGGTTCGAGCCCCGTCCACTCCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Cys-GCA-1-1 (tRNAscan-SE ID: chr.trna27) Cys (GCA) 74 bp mature sequence Sc: 70.6 chr:2552688-2552761 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Cys-GCA-1-1 (tRNAscan-SE ID: chr.trna27) Cys (GCA) 74 bp Sc: 70.6 chr:2678450-2678523 (-)
 GGCTGTGTGGCAGAGTGGTCATGCAGCGGCCTGCAAAGCCGTGTACGCCGGTTCGATTCCGGCCTCAGCCTCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Gln-TTG-1-1 (tRNAscan-SE ID: chr.trna44) Gln (TTG) 75 bp mature sequence Sc: 70.7 chr:590627-590701 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Gln-TTG-1-1 (tRNAscan-SE ID: chr.trna44) Gln (TTG) 75 bp Sc: 70.7 chr:669211-669285 (-)
 AGGGGTGTCGCCAAGCGGTAAGGCACAGGGTTTTGATCCCTGCATACCTAGGTTCGAATCCTAGCACCCCTGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Glu-TTC-1-1 (tRNAscan-SE ID: chr.trna32) Glu (TTC) 76 bp mature sequence Sc: 64.0 chr:2015607-2015682 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Glu-TTC-1-1 (tRNAscan-SE ID: chr.trna31) Glu (TTC) 76 bp Sc: 64.0 chr:2177655-2177730 (-)
 GTCCCCATCGTCTAGAGGCCTAGGACATCGCCCTTTCACGGCGGTAACGGGGGTTCGAATCCCCCTGGGGACGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Glu-TTC-1-2 (tRNAscan-SE ID: chr.trna31) Glu (TTC) 76 bp mature sequence Sc: 64.0 chr:2015739-2015814 (-)
-GTCCCCATCGTCTAGAGGCCTAGGACATCGCCCTTTCACGGCGGTAACGGGGGTTCGAATCCCCCTGGGGACGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Gly-CCC-1-1 (tRNAscan-SE ID: chr.trna8) Gly (CCC) 71 bp mature sequence Sc: 76.9 chr:600002-600072 (+)
-GCGGGTGTAGTTCAATGGCAGAACCTCAGCTTCCCAAGCTGATGGCGTGGGTTCGATTCCCATCACCCGCT
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Gly-GCC-1-1 (tRNAscan-SE ID: chr.trna26) Gly (GCC) 76 bp mature sequence Sc: 86.9 chr:2552822-2552897 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Glu-TTC-2-1 (tRNAscan-SE ID: chr.trna32) Glu (TTC) 73 bp Sc: 57.1 chr:2177526-2177598 (-)
+GTCCCCATCGTCTAGAGGCCTAGGACATCGCCCTTTCACGGCGGTAACGGGGGTTCGAATCCCCCTGGGGACG
+>Legionella_pneumophila_230099_Alcoy_tRNA-Gly-CCC-1-1 (tRNAscan-SE ID: chr.trna9) Gly (CCC) 71 bp Sc: 78.3 chr:678158-678228 (+)
+GCGGGTGTAGTTCAATGGTAGAACCTCAGCTTCCCAAGCTGATGGCGTGGGTTCGATTCCCATCACCCGCT
+>Legionella_pneumophila_230099_Alcoy_tRNA-Gly-GCC-1-1 (tRNAscan-SE ID: chr.trna26) Gly (GCC) 76 bp Sc: 86.9 chr:2678584-2678659 (-)
 GCGGGAATAGCTCAGTTGGTAGAGCATAACCTTGCCAAGGTTAGGGTCGCGAGTTCGAGTCTCGTTTCCCGCTCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Gly-TCC-1-1 (tRNAscan-SE ID: chr.trna5) Gly (TCC) 74 bp mature sequence Sc: 83.1 chr:369352-369425 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Gly-TCC-1-1 (tRNAscan-SE ID: chr.trna6) Gly (TCC) 74 bp Sc: 83.1 chr:414280-414353 (+)
 GCGGGTGTAGTTCAATGGTAGAACTTCAGCCTTCCAAGCTGATAGCGTGGGTTCGATTCCCATCACCCGCTCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-His-GTG-1-1 (tRNAscan-SE ID: chr.trna35) His (GTG) 76 bp mature sequence Sc: 74.1 chr:2002790-2002865 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-His-GTG-1-1 (tRNAscan-SE ID: chr.trna35) His (GTG) 76 bp Sc: 74.1 chr:2161103-2161178 (-)
 GTGAGCGTAGCTCAGTTGGTAGAGCCCCGGGTTGTGATCCCGGTTGTCGTGGGTTCGAGTCCCATCGTTCACCCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ile2-CAT-1-1 (tRNAscan-SE ID: chr.trna19) Ile2 (CAT) 77 bp mature sequence Sc: 88.5 chr:2629803-2629879 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ile-GAT-1-1 (tRNAscan-SE ID: chr.trna10) Ile (GAT) 77 bp Sc: 84.2 chr:692143-692219 (+)
+GGGTCTGTAGATCAGTTGGTTAGATCGCACCCCTGATAAGGGTGAGGTCGGTGGTTCAAGTCCACCCAGACCCACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ile2-CAT-1-1 (tRNAscan-SE ID: chr.trna19) Ile2 (CAT) 77 bp Sc: 88.5 chr:2756571-2756647 (+)
 GGGCCCATAGCTCAGTTGGTCAGAGCAGCGGACTCATAATCCGTTGGTCCTAGGTTCAAGTCCTAGTGGGCCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Leu-CAA-1-1 (tRNAscan-SE ID: chr.trna43) Leu (CAA) 87 bp mature sequence Sc: 79.5 chr:883342-883428 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Leu-CAA-1-1 (tRNAscan-SE ID: chr.trna43) Leu (CAA) 87 bp Sc: 79.5 chr:965685-965771 (-)
 GCCGGGGTGGCGGAATTGGTAGACGCGCCGGATTCAAAATCCGGTGGTGGTGACACCGTGTGGGTTCGAGTCCCACCCTCGGTACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Leu-CAG-1-1 (tRNAscan-SE ID: chr.trna20) Leu (CAG) 87 bp mature sequence Sc: 71.8 chr:3323601-3323687 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Leu-CAG-1-1 (tRNAscan-SE ID: chr.trna20) Leu (CAG) 87 bp Sc: 71.8 chr:3479149-3479235 (+)
 GCCGAGGTGGTGGAATTGGTAGACACGCTAGCTTCAGGTGCTAGTGGGGGCAACCCCGTGGAGGTTCGAGTCCTCTTCTCGGTACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Leu-GAG-1-1 (tRNAscan-SE ID: chr.trna21) Leu (GAG) 85 bp mature sequence Sc: 70.4 chr:3102275-3102359 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Leu-GAG-1-1 (tRNAscan-SE ID: chr.trna21) Leu (GAG) 85 bp Sc: 70.4 chr:3254903-3254987 (-)
 GCCGAAGTGGTGAAATTGGTAGACACGCCGTCTTGAGGGGGCGGTGGCGCAAGCCGTGCCGGTTCGAGTCCGGCCTTCGGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Leu-TAA-1-1 (tRNAscan-SE ID: chr.trna28) Leu (TAA) 87 bp mature sequence Sc: 77.7 chr:2552584-2552670 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Leu-TAA-1-1 (tRNAscan-SE ID: chr.trna28) Leu (TAA) 87 bp Sc: 77.7 chr:2678347-2678433 (-)
 GCCCAGGTGGCGAAACAGGTAGACGCAAGGGACTTAAAATCCCTCGGTGGTAACACCATGCCGGTTCGATTCCGGCCCTGGGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Leu-TAG-1-1 (tRNAscan-SE ID: chr.trna36) Leu (TAG) 85 bp mature sequence Sc: 73.1 chr:2002615-2002699 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Leu-TAG-1-1 (tRNAscan-SE ID: chr.trna36) Leu (TAG) 85 bp Sc: 73.1 chr:2160928-2161012 (-)
 GCGAAAGTGGCGGAATTGGTAGACGCACTGGATTTAGGTTCCAGCGGGGCGACCCGTGAGAGTTCGAGTCTCTCCTTTCGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Lys-CTT-1-1 (tRNAscan-SE ID: chr.trna29) Lys (CTT) 73 bp mature sequence Sc: 79.3 chr:2401575-2401647 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Lys-CTT-1-1 (tRNAscan-SE ID: chr.trna29) Lys (CTT) 73 bp Sc: 79.3 chr:2525953-2526025 (-)
 GGGCCGTTAGCTCAGTTGGTAGAGCAGGAGACTCTTAATCTCAGGGTCATAGGTTCGAATCCTATACGGCCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Lys-TTT-1-1 (tRNAscan-SE ID: chr.trna14) Lys (TTT) 76 bp mature sequence Sc: 82.6 chr:2212919-2212994 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Lys-TTT-1-1 (tRNAscan-SE ID: chr.trna16) Lys (TTT) 76 bp Sc: 82.6 chr:2401569-2401644 (+)
 GGGCCGTTAGCTCAGGTGGTAGAGCAGGAGGCTTTTAACCTCTGTGTCATAGGTTCGAATCCTATACGGCCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Lys-TTT-1-2 (tRNAscan-SE ID: chr.trna15) Lys (TTT) 76 bp mature sequence Sc: 82.6 chr:2213050-2213125 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Lys-TTT-1-2 (tRNAscan-SE ID: chr.trna17) Lys (TTT) 76 bp Sc: 82.6 chr:2401700-2401775 (+)
 GGGCCGTTAGCTCAGGTGGTAGAGCAGGAGGCTTTTAACCTCTGTGTCATAGGTTCGAATCCTATACGGCCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Met-CAT-1-1 (tRNAscan-SE ID: chr.trna39) Met (CAT) 77 bp mature sequence Sc: 82.9 chr:1384332-1384408 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Met-CAT-1-1 (tRNAscan-SE ID: chr.trna39) Met (CAT) 77 bp Sc: 82.9 chr:1534956-1535032 (-)
 GGCTATGTAGCTCAGCCGGTTAGAGCGCGGCACTCATAATGCTGAGGTCGGTGGTTCGAGTCCACCCATAGCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Phe-GAA-1-1 (tRNAscan-SE ID: chr.trna13) Phe (GAA) 76 bp mature sequence Sc: 81.5 chr:2070858-2070933 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Phe-GAA-1-1 (tRNAscan-SE ID: chr.trna14) Phe (GAA) 76 bp Sc: 81.5 chr:2240025-2240100 (+)
 GGCCAGATAGCTCAGTCGGTAGAGCAGAGGACTGAAAATCCTCGTGTCGGCAGTTCGATTCTGCCTCTGGCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Pro-CGG-1-1 (tRNAscan-SE ID: chr.trna45) Pro (CGG) 77 bp mature sequence Sc: 78.0 chr:570286-570362 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Phe-GAA-2-1 (tRNAscan-SE ID: chr.trna15) Phe (GAA) 67 bp Sc: 32.8 chr:2249158-2249224 (+)
+GTTAAAAAGGTATTTTAAAGGACTGAAAATCCTCGTGTCGGCAGTTCGATTCTGCCTCTGGCCACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Pro-CGG-1-1 (tRNAscan-SE ID: chr.trna45) Pro (CGG) 77 bp Sc: 78.0 chr:648868-648944 (-)
 CGGAGTGTAGCTCAGACTGGTAGAGCACTGCCTTCGGGAGGCAGGGGTCGCAGGTTCAATTCCTGTCACTCCGACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Pro-GGG-1-1 (tRNAscan-SE ID: chr.trna25) Pro (GGG) 77 bp mature sequence Sc: 71.1 chr:2865665-2865741 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Pro-GGG-1-1 (tRNAscan-SE ID: chr.trna25) Pro (GGG) 77 bp Sc: 71.1 chr:3015539-3015615 (-)
 CGGGGCGTAGCGCAGCCTGGTAGCGCACTAGCATGGGGTGCTAGTGGTCGAAGGTTCAAATCCTTCCGTCCCGACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Pro-TGG-1-1 (tRNAscan-SE ID: chr.trna33) Pro (TGG) 77 bp mature sequence Sc: 75.8 chr:2003109-2003185 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Pro-TGG-1-1 (tRNAscan-SE ID: chr.trna33) Pro (TGG) 77 bp Sc: 75.8 chr:2161421-2161497 (-)
 CGGGGTGTAGCGCAGTCTGGTAGCGCGCCTGCTTTGGGAGCAGGATGTCGGGGGTTCAAATCCCTCCTCCCCGACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ser-GCT-1-1 (tRNAscan-SE ID: chr.trna11) Ser (GCT) 90 bp mature sequence Sc: 91.1 chr:1683148-1683237 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ser-GCT-1-1 (tRNAscan-SE ID: chr.trna12) Ser (GCT) 90 bp Sc: 91.1 chr:1829044-1829133 (+)
 GGAGAGATGGCCGAGTGGTCGAAGGCGCTCCCCTGCTAAGGGAGTATGGGAGAAATCCCATCGAGGGTTCGAATCCCTCTCTCTCCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ser-GGA-1-1 (tRNAscan-SE ID: chr.trna42) Ser (GGA) 88 bp mature sequence Sc: 84.1 chr:974279-974366 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ser-GGA-1-1 (tRNAscan-SE ID: chr.trna42) Ser (GGA) 88 bp Sc: 84.1 chr:1049654-1049741 (-)
 GGAGAGATGGCCGAGCGGTCGAAGGCGCACGCCTGGAAAGTGTGTATACGGCAACGTATCGAGGGTTCGAATCCCTCTCTCTCCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Ser-TGA-1-1 (tRNAscan-SE ID: chr.trna41) Ser (TGA) 88 bp mature sequence Sc: 77.7 chr:1275189-1275276 (-)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Ser-TGA-1-1 (tRNAscan-SE ID: chr.trna41) Ser (TGA) 88 bp Sc: 77.7 chr:1436877-1436964 (-)
 GGAGAGATGGCAGAGCGGTCGATTGCGGCGGTCTTGAAAACCGTTGAAGGGCAACCTTCCCAGGGTTCGAATCCCTGTCTCTCCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Thr-CGT-1-1 (tRNAscan-SE ID: chr.trna10) Thr (CGT) 73 bp mature sequence Sc: 72.1 chr:1085605-1085677 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Thr-CGT-1-1 (tRNAscan-SE ID: chr.trna11) Thr (CGT) 73 bp Sc: 72.1 chr:1162679-1162751 (+)
 GCCGTTGTAGCTCAGTTGGTAGAGCAATTGATTCGTAATCAAGAGGTCGGAGGTTCGACTCCTCTCAGCGGCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Thr-GGT-1-1 (tRNAscan-SE ID: chr.trna6) Thr (GGT) 76 bp mature sequence Sc: 81.3 chr:369478-369553 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Thr-GGT-1-1 (tRNAscan-SE ID: chr.trna7) Thr (GGT) 76 bp Sc: 81.3 chr:414406-414481 (+)
 GCCCACATAGCTCAGGCGGTAGAGCACTTCCTTGGTAAGGAAGAGGTCGTTGGTTCGAGTCCAGTTGTGGGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Thr-TGT-1-1 (tRNAscan-SE ID: chr.trna3) Thr (TGT) 76 bp mature sequence Sc: 87.7 chr:369099-369174 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Thr-TGT-1-1 (tRNAscan-SE ID: chr.trna4) Thr (TGT) 76 bp Sc: 87.7 chr:414027-414102 (+)
 GCTGGCGTAGCTCAGTTGGTAGAGCAACTGACTTGTAATCAGTAGGTCCCGGGTTCGATTCCTGGTGCCAGCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Trp-CCA-1-1 (tRNAscan-SE ID: chr.trna7) Trp (CCA) 76 bp mature sequence Sc: 83.6 chr:370838-370913 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Trp-CCA-1-1 (tRNAscan-SE ID: chr.trna8) Trp (CCA) 76 bp Sc: 83.6 chr:415768-415843 (+)
 AGGCCAGTAGCTCAATTGGCAGAGTGGCGGTCTCCAAAACCGCAGGTTGGGGGTTCGATTCCCTCCTGGCCTGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Tyr-GTA-1-1 (tRNAscan-SE ID: chr.trna4) Tyr (GTA) 85 bp mature sequence Sc: 80.2 chr:369247-369331 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Tyr-GTA-1-1 (tRNAscan-SE ID: chr.trna5) Tyr (GTA) 85 bp Sc: 80.2 chr:414175-414259 (+)
 GGAGGGGTTCCCGAGCGGTCAAAGGGATCAGACTGTAAATCTGACGGCTCAGCCTTCGAAGGTTCGAATCCTTCCCCCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Und-NNN-1-1 (tRNAscan-SE ID: chr.trna1) Undet (NNN) 97 bp mature sequence Sc: 26.5 chr:172570-172666 (+)
+>Legionella_pneumophila_230099_Alcoy_tRNA-Und-NNN-1-1 (tRNAscan-SE ID: chr.trna1) Undet (NNN) 97 bp Sc: 26.5 chr:181428-181524 (+)
 GGAGGAGCCACAGTTAAATTCAAAAGACAAGGCTATGCATGTAGAGCTAAAGGCAGAGGACTTGCGGACGCGGGTTCGATTCCCGCCGCCTCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Und-NNN-2-1 (tRNAscan-SE ID: chr.trna17) Undet (NNN) 143 bp mature sequence Sc: 22.3 chr:2277328-2277470 (+)
-CGTTTGTAGTGTATTTGTGGCAGTTCTAGGCAGTAATTCGATGATTTGATGCATCGTAAGTTGTTGATTTATAATGTTTTCTATTATTGAGTATCAGGCTTCGAACCAAGGTGTCGGGGG
-UUCGAGUCCCUCCGAGCGCGCCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Val-GAC-1-1 (tRNAscan-SE ID: chr.trna24) Val (GAC) 75 bp mature sequence Sc: 78.6 chr:3028313-3028387 (-)AGGCACGTAGCTCAGTGGTAGAGCACCACCTTGACATGGTGGTGGTCGGTGGTTCGATCC
-CACUCGUGCCUACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-Val-TAC-1-1 (tRNAscan-SE ID: chr.trna37) Val (TAC) 76 bp mature sequence Sc: 86.1 chr:1996014-1996089 (-)GGGTGCTTAGCTCAGCTGGGAGAGCATCGCCCTTACAAGGCGAGGGTCGTAGGTTCGATC
-CCUACAGCACCCACCA
->Legionella_pneumophila_subsp_pneumophila_ATCC_43290_tRNA-fMet-CAT-1-1 (tRNAscan-SE ID: chr.trna22) fMet (CAT) 77 bp mature sequence Sc: 77.3 chr:3087303-3087379 (-)CGCGGGGTGGAGCAGCCTGGTAGCTCGTCGGGCTCATAACCCGAAGGTCGTAGGTTCAAA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Und-NNN-2-1 (tRNAscan-SE ID: chr.trna2) Undet (NNN) 85 bp Sc: 22.2 chr:213283-213367 (+)
+AGAATTGGCAAGTCTAAAATTATGGTCATATAAATCAATGAGTTACGAGAAATTGTCGCGGGTTCGATTCCCGCCGCCTCCACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Und-NNN-3-1 (tRNAscan-SE ID: chr.trna46) Undet (NNN) 87 bp Sc: 21.5 chr:609208-609294 (-)
+TGGAGATGTATAGAAATGCATTAAGAAACAATCGGGATCGCCTTCGGGAGGCAGGGGTCGCAGGTTCAATTCCTGTCACTCCGACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Val-GAC-1-1 (tRNAscan-SE ID: chr.trna24) Val (GAC) 75 bp Sc: 78.6 chr:3179722-3179796 (-)
+AGGCACGTAGCTCAGTGGTAGAGCACCACCTTGACATGGTGGTGGTCGGTGGTTCGATCCCACTCGTGCCTACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-Val-TAC-1-1 (tRNAscan-SE ID: chr.trna37) Val (TAC) 76 bp Sc: 86.1 chr:2154331-2154406 (-)
+GGGTGCTTAGCTCAGCTGGGAGAGCATCGCCCTTACAAGGCGAGGGTCGTAGGTTCGATCCCTACAGCACCCACCA
+>Legionella_pneumophila_230099_Alcoy_tRNA-fMet-CAT-1-1 (tRNAscan-SE ID: chr.trna22) fMet (CAT) 77 bp Sc: 77.3 chr:3239933-3240009 (-)
+CGCGGGGTGGAGCAGCCTGGTAGCTCGTCGGGCTCATAACCCGAAGGTCGTAGGTTCAAATCCTGCCCCCGCTACCA
