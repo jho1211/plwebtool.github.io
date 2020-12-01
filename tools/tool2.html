@@ -50,7 +50,7 @@
 
 <div class="container">
   <div class="col-sm-12 alert alert-danger alert-dismissible" id="errorAlert" hidden>
-  <b>Error occurred.</b> Please ensure that the input format is correct.
+  <b>Error occurred.</b> No input detected.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -60,6 +60,12 @@
   <button type="button" class="close" onclick="hideAlert('successAlert')" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
+  </div>
+  <div class="col-sm-12 alert alert-warning alert-dismissible" id="loadAlert" hidden>
+    The tool is now running. The page will be frozen during this time.
+      <button type="button" class="close" onclick="hideAlert('loadAlert')" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
   </div>
   <div class="row">
     <div class="col-sm-4 bg-light">
@@ -71,13 +77,25 @@
 
       <!-- The button used to erase all text -->
       <button class="btn btn-outline-dark" onclick="clearInput('fastaInput')">Clear</button>
+      <hr class="my-3">
+
+      <label for="inputGroupFile02"><i>Upload FASTA file:</i></label>
+
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="fastaFileInput" accept=".txt, .fa, .fasta">
+          <label class="custom-file-label" for="fastaFileInput" aria-describedby="inputGroupFileAddon02">Choose file</label>
+        </div>
+      </div>
+
+      <pre id="fastaFileText" hidden></pre>
     </div>
 
     <div class="col-sm-4 my-auto">
       <label for="limit">Number of dRNA/CdRNA to Generate (Leave blank for no limit)</label>
       <input type="limit" class="form-control" id="limit" aria-describedby="limitAnalysis"> <br>
 
-      <button onclick="runTool('fastaInput', 'limit', 'fastaOutput')" type="submit" class="btn btn-outline-primary">Run Analysis</button>
+      <button onclick="runTool('fastaInput', 'fastaFileInput', 'limit', 'fastaOutput')" type="submit" class="btn btn-outline-primary">Run Analysis</button>
     </div>
 
     <div class="col-sm-4 bg-light">

@@ -17,21 +17,39 @@ function nthElements(arr, start, step){
 
 var reference;
 
-async function runTool(fasta, limit, outputid){
+async function runTool(fasta, fileInput, limit, outputid){
   var input = document.getElementById(fasta).value;
+  var files = document.getElementById(fileInput).files;
   var max = parseInt(document.getElementById(limit).value);
+
+  showLoad();
 
   if (max == -1 || max == 0 || isNaN(max)){
     max = Infinity;
   }
 
+  if (input == ""){
+    if (files.length == 0){
+
+      showError();
+      hideAlert("loadAlert");
+
+      return undefined;
+    }
+    else{
+      input = document.getElementById("fastaFileText").textContent;
+    }
+  }
+  else{
+    input = document.getElementById(fasta).value;
+  }
+
   reference = await getData('https://plwebtool.github.io/tools/db/ribo58s.fa');
 
   var output = generateDRNA(input, max)
+  hideAlert("loadAlert");
 
-  if (document.getElementById('successAlert').hasAttribute('hidden')){
-    document.getElementById('successAlert').removeAttribute('hidden');
-  }
+  showSuccess();
 
   document.getElementById(outputid).value = output;
 }

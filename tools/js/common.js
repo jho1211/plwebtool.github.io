@@ -11,6 +11,28 @@ function hideAlert(id){
   document.getElementById(id).setAttribute('hidden', 'true')
 }
 
+function isHidden(id){
+  return document.getElementById(id).hasAttribute('hidden')
+}
+
+function showSuccess(){
+  if (isHidden('successAlert')){
+    hideAlert('successAlert');
+  }
+}
+
+function showError(){
+  if (isHidden('errorAlert')){
+    hideAlert('errorAlert');
+  }
+}
+
+function showLoad(){
+  if (isHidden('loadAlert')){
+    hideAlert('loadAlert');
+  }
+}
+
 function fileRead(file){
   const reader = new FileReader();
   reader.onload = fileLoad;

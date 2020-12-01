@@ -15,24 +15,6 @@ async function getData(url){
   return response.text();
 }
 
-function showSuccess(){
-  if (document.getElementById('successAlert').hasAttribute('hidden')){
-    document.getElementById('successAlert').removeAttribute('hidden');
-  }
-}
-
-function showError(){
-  if (document.getElementById('errorAlert').hasAttribute('hidden')){
-    document.getElementById('errorAlert').removeAttribute('hidden');
-  }
-}
-
-function showLoad(){
-  if (document.getElementById('loadAlert').hasAttribute('hidden')){
-    document.getElementById('loadAlert').removeAttribute('hidden');
-  }
-}
-
 async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   var input = document.getElementById(fasta).value;
   var fileInput = document.getElementById(fastaFile).files;
