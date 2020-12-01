@@ -50,16 +50,22 @@
 
 <div class="container">
   <div class="col-sm-12 alert alert-danger alert-dismissible" id="errorAlert" hidden>
-  <b>Error occurred.</b> Please ensure that the input is correct.
-  <button type="button" class="close" onclick="hideAlert('errorAlert')" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+    <b>Error occurred.</b> Please ensure that the input is correct.
+      <button type="button" class="close" onclick="hideAlert('errorAlert')" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
   </div>
   <div class="col-sm-12 alert alert-success alert-dismissible" id="successAlert" hidden>
-  Matching tRFs have been successfully generated!
-  <button type="button" class="close" onclick="hideAlert('successAlert')" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+    Matching tRFs have been successfully generated!
+      <button type="button" class="close" onclick="hideAlert('successAlert')" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="col-sm-12 alert alert-warning alert-dismissible" id="loadAlert" hidden>
+    The tool is now running. The page will be frozen during this time.
+      <button type="button" class="close" onclick="hideAlert('loadAlert')" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
   </div>
   <div class="row">
     <div class="col-sm-4 bg-light">
@@ -94,7 +100,7 @@
           <option value = "ecoli-tRNA-db.txt">E. coli MG1655</option>
           <option value = "scerevisiae-tRNA-db.txt">S. cerevisiae</option>
           <option value = "saureus-tRNA-db.txt">S. aureus</option>
-          <option value = "spneumophila-tRNA-db.txt">L. pneumophila</option>
+          <option value = "lpneumophila-tRNA-db.txt">L. pneumophila</option>
           <option value = "paeruginosa-tRNA-db.txt">P. aeruginosa</option>
         </select>
       </div>

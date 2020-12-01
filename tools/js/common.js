@@ -24,11 +24,17 @@ function fileLoad(event){
 
 // Changes the label of the file input to match the name of the document
 document.querySelector('.custom-file-input').addEventListener('change', function(e){
-  let file = e.target.files[0]
+  if (e.target.files.length != 0){
+    let file = e.target.files[0]
 
-  var nextSibling = e.target.nextElementSibling
-  nextSibling.innerText = file.name;
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = file.name;
 
-  fileRead(e.target.files[0])
-  alert(file.name + " has been successfully loaded.");
+    fileRead(e.target.files[0])
+    alert(file.name + " has been successfully loaded.");
+  }
+  else{
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = "Choose file";
+  }
 })

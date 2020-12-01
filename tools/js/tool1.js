@@ -27,11 +27,19 @@ function showError(){
   }
 }
 
+function showLoad(){
+  if (document.getElementById('loadAlert').hasAttribute('hidden')){
+    document.getElementById('loadAlert').removeAttribute('hidden');
+  }
+}
+
 async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   var input = document.getElementById(fasta).value;
   var fileInput = document.getElementById(fastaFile).files;
   var max = parseInt(document.getElementById(numTRFs).value);
   var output;
+
+  showLoad();
 
   if (max == -1 || max == 0 || isNaN(max)){
     max = Infinity;
@@ -50,6 +58,8 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
     if (fileInput.length == 0){
 
       showError();
+      hideAlert("loadAlert");
+
       return undefined;
     }
     else{
@@ -58,13 +68,14 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   }
   else{
     input = document.getElementById(fasta).value;
+
   }
 
-  console.log(input);
-
-  output = findTRFs(input, max)
+  output = findTRFs(input, max);
 
   document.getElementById(outputid).value = output;
+
+  hideAlert('loadAlert');
   showSuccess();
 
   return undefined;
@@ -78,7 +89,6 @@ function binarySearch(seq){
 
   while ((i == -1) && (first <= last)){
     var mid = Math.floor((first + last) / 2);
-    console.log(mid);
 
     if (refSeqs[mid].includes(seq)){
       i = mid;
@@ -93,8 +103,6 @@ function binarySearch(seq){
       first = mid + 1
     }
   }
-
-  console.log(found);
 
   if (found){
     return mid;
