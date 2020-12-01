@@ -50,8 +50,8 @@
 
 <div class="container">
   <div class="col-sm-12 alert alert-danger alert-dismissible" id="errorAlert" hidden>
-  <b>Error occurred.</b> Please ensure that the input format is correct.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <b>Error occurred.</b> Please ensure that the input is correct.
+  <button type="button" class="close" onclick="hideAlert('errorAlert')" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
   </div>
@@ -64,13 +64,25 @@
   <div class="row">
     <div class="col-sm-4 bg-light">
       <div class="form-group">
-        <label for="inputForm"><i>Enter your FASTA sequences here:</i></label>
+        <label for="fastaInput"><i>Enter your FASTA sequences here:</i></label>
         <textarea class="form-control" id="fastaInput" rows="10"
         placeholder=">1E_0_x102&#10;ATGCAGTGCTAGCTAGT"></textarea>
       </div>
 
       <!-- The button used to erase all text -->
       <button class="btn btn-outline-dark" onclick="clearInput('fastaInput')">Clear</button>
+      <hr class="my-3">
+
+      <label for="inputGroupFile02"><i>Upload FASTA file:</i></label>
+
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="fastaFileInput" accept=".txt, .fa, .fasta">
+          <label class="custom-file-label" for="fastaFileInput" aria-describedby="inputGroupFileAddon02">Choose file</label>
+        </div>
+      </div>
+
+      <pre id="fastaFileText" hidden></pre>
     </div>
 
     <div class="col-sm-4 my-auto">
@@ -87,7 +99,7 @@
         </select>
       </div>
       <!-- runTool takes in num-trfs, genomeSelect, input -->
-      <button onclick="runTool('fastaInput', 'num-trfs', 'genomeSelect', 'fastaOutput')" type="submit" class="btn btn-outline-primary">Run Analysis</button>
+      <button onclick="runTool('fastaInput', 'fastaFileInput', 'num-trfs', 'genomeSelect', 'fastaOutput')" type="submit" class="btn btn-outline-primary">Run Analysis</button>
     </div>
 
     <div class="col-sm-4 bg-light">
@@ -101,7 +113,6 @@
     </div>
 
   </div>
-
 
 </div>
 

@@ -1,3 +1,13 @@
+/*
+Declare some global variables
+*/
+
+var ref;
+var refSeqs;
+var refDescs;
+
+// End of declaration
+
 async function getData(url){
 
   const response = await fetch(url);
@@ -5,10 +15,23 @@ async function getData(url){
   return response.text();
 }
 
-async function runTool(fasta, numTRFs, genome, outputid){
+function showSuccess(){
+  if (document.getElementById('successAlert').hasAttribute('hidden')){
+    document.getElementById('successAlert').removeAttribute('hidden');
+  }
+}
+
+function showError(){
+  if (document.getElementById('errorAlert').hasAttribute('hidden')){
+    document.getElementById('errorAlert').removeAttribute('hidden');
+  }
+}
+
+async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   var input = document.getElementById(fasta).value;
-  var refFileName = document.getElementById(genome).value;
+  var fileInput = document.getElementById(fastaFile).files;
   var max = parseInt(document.getElementById(numTRFs).value);
+  var output;
 
   if (max == -1 || max == 0 || isNaN(max)){
     max = Infinity;
@@ -16,39 +39,53 @@ async function runTool(fasta, numTRFs, genome, outputid){
 
   try{
     var fileName = document.getElementById(genome).value;
-    var ref;
 
     ref = await getData('https://plwebtool.github.io/tools/db/' + fileName);
   }
   catch(err){
     alert('Species not implemented yet.');
   }
-  
-  var output = findTRFs(input, ref, max)
 
-  if (document.getElementById('successAlert').hasAttribute('hidden')){
-    document.getElementById('successAlert').removeAttribute('hidden');
+  if (input == ""){
+    if (fileInput.length == 0){
+
+      showError();
+      return undefined;
+    }
+    else{
+      input = document.getElementById("fastaFileText").textContent;
+    }
+  }
+  else{
+    input = document.getElementById(fasta).value;
   }
 
+  console.log(input);
+
+  output = findTRFs(input, max)
+
   document.getElementById(outputid).value = output;
+  showSuccess();
+
+  return undefined;
 }
 
-/*
-function binarySearch(seq, ref){
+function binarySearch(seq){
   var first = 0;
-  var last = ref.length - 1;
-  var i = -1;
+  var last = refSeqs.length - 1;
+  let i = -1;
   var found = false;
 
   while ((i == -1) && (first <= last)){
     var mid = Math.floor((first + last) / 2);
+    console.log(mid);
 
-    if (ref[mid] == seq){
+    if (refSeqs[mid].includes(seq)){
       i = mid;
       found = true;
     }
 
-    else if (seq < ref[mid]){
+    else if (seq < refSeqs[mid]){
       last = mid - 1
     }
 
@@ -57,9 +94,15 @@ function binarySearch(seq, ref){
     }
   }
 
-  return found
+  console.log(found);
+
+  if (found){
+    return mid;
+  }
+  else{
+    return false;
+  }
 }
-*/
 
 function nthElements(arr, start, step){
   var newArr = [];
@@ -90,28 +133,25 @@ function trfName(desc){
   return desc.slice(start, end)
 }
 
-function searchRef(seq, ref){
+function searchRef(seq){
   /* Search for the seq in the reference text
      Return the name of the tRF it corresponds to if found */
 
-  var refArray = ref.split('\n');
-  var refDescs = nthElements(refArray, 0, 2);
-  var refSeqs = nthElements(refArray, 1, 2);
+  let result = binarySearch(seq)
 
-  for (var i = 0; i < refSeqs.length; i++){
-    if (refSeqs[i].includes(seq)){
-      return trfName(refDescs[i]);
-    }
+  if (typeof(result) == "number"){
+    return trfName(refDescs[result])
   }
-
-  return false; // return false if nothing is found
+  else{
+    return false;
+  }
 }
 
-function isTRF(seq, ref){
+function isTRF(seq){
   var subseqs = generateSubsequences(seq)
 
   for (var i = 0; i < subseqs.length; i++){
-    var result = searchRef(subseqs[i], ref);
+    var result = searchRef(subseqs[i]);
 
     if (typeof(result) == "string"){
       return result + ', sequence matched: ' + subseqs[i];
@@ -121,11 +161,15 @@ function isTRF(seq, ref){
   return false;
 }
 
-function findTRFs(fasta, ref, limit){
+function findTRFs(fasta, limit){
   var fastaArray = fasta.split('\n');
 
   var descs = nthElements(fastaArray, 0, 2);
   var seqs = nthElements(fastaArray, 1, 2);
+
+  var refArray = ref.split('\n');
+  refDescs = nthElements(refArray, 0, 2);
+  refSeqs = nthElements(refArray, 1, 2);
 
   var newFastaArray = [];
 
@@ -135,7 +179,7 @@ function findTRFs(fasta, ref, limit){
       return newFastaArray.join('\n');
     }
 
-    var result = isTRF(seqs[i], ref);
+    var result = isTRF(seqs[i]);
 
 
     if (typeof(result) == "string"){
