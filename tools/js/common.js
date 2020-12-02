@@ -3,6 +3,31 @@ function copyOutput(id){
   document.execCommand("copy");
 }
 
+function downloadOutput(buttonID, id){
+  var text = document.getElementById(id).value;
+  var filename = "btrfs-output.txt"
+
+  var blob = new Blob([text], {type: "text/plain"});
+  var url = window.URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+
+  window.URL.revokeObjectURL(url);
+  a.remove();
+
+  return undefined;
+}
+
+function disableButton(id){
+  document.getElementById(id).setAttribute("disabled", true);
+}
+
+function enableButton(id){
+  document.getElementById(id).removeAttribute("disabled");
+}
+
 function clearInput(id){
   document.getElementById(id).value = "";
 }
@@ -36,6 +61,16 @@ function fileRead(file){
 
 function fileLoad(event){
   document.getElementById('fastaFileText').textContent = event.target.result;
+}
+
+function nthElements(arr, start, step){
+  var newArr = [];
+
+  for (var i = start; i < arr.length; i += step){
+    newArr.push(arr[i]);
+  }
+
+  return newArr;
 }
 
 // Changes the label of the file input to match the name of the document

@@ -62,6 +62,8 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   hideAlert('loadAlert');
   showAlert("successAlert");
 
+  enableButton("download");
+
   return undefined;
 }
 
@@ -94,16 +96,6 @@ function binarySearch(seq){
   else{
     return false;
   }
-}
-
-function nthElements(arr, start, step){
-  var newArr = [];
-
-  for (var i = start; i < arr.length; i += step){
-    newArr.push(arr[i]);
-  }
-
-  return newArr;
 }
 
 function generateSubsequences(seq){
