@@ -51,7 +51,7 @@
 <div class="container">
   <div class="col-sm-12 alert alert-danger alert-dismissible" id="errorAlert" hidden>
   <b>Error occurred.</b> No input detected.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <button type="button" class="close" onclick="hideAlert('errorAlert')" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
   </div>
@@ -62,7 +62,7 @@
   </button>
   </div>
   <div class="col-sm-12 alert alert-warning alert-dismissible" id="loadAlert" hidden>
-    The tool is now running. The page will be frozen during this time.
+  The tool is now running. The page will be frozen during this time.
       <button type="button" class="close" onclick="hideAlert('loadAlert')" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -105,7 +105,7 @@
       </div>
 
       <button class="btn btn-outline-dark" onclick="copyOutput('fastaOutput')">Copy Output</button>
-      <button class="btn btn-outline-dark float-right" disabled id="download" onclick="downloadOutput('download', 'fastaOutput')">Save Output</button>
+      <button class="btn btn-outline-dark float-right" disabled id="download" onclick="downloadOutput('download', 'fastaOutput', 'drna-output.txt')">Save Output</button>
     </div>
 
   </div>

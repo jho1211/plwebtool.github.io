@@ -1,21 +1,31 @@
-function nthElements(arr, start, step){
-  var newArr = [];
-
-  for (var i = start; i < arr.length; i += step){
-    newArr.push(arr[i]);
-  }
-
-  return newArr;
-}
-
-async function getData(url){
-
-  const response = await fetch(url);
-
-  return response.text();
-}
-
 var reference;
+
+function fileRead(file){
+  const reader = new FileReader();
+  reader.onload = fileLoad;
+
+  reader.readAsText(file);
+}
+
+function fileLoad(event){
+  document.getElementById('fastaFileText').textContent = event.target.result;
+}
+
+document.querySelector('.custom-file-input').addEventListener('change', function(e){
+  if (e.target.files.length != 0){
+    let file = e.target.files[0]
+
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = file.name;
+
+    fileRead(e.target.files[0])
+    alert(file.name + " has been successfully loaded.");
+  }
+  else{
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = "Choose file";
+  }
+})
 
 async function runTool(fasta, fileInput, limit, outputid){
   var input = document.getElementById(fasta).value;
@@ -81,7 +91,7 @@ function generateDRNA(input, max){
 
   for (var i = 0; i < seqs.length; i++){
     if ((dArray.length / 2) == max){
-      return dArray
+      return dArray.join('\n');
     }
 
     if (isDRNA(seqs[i], reference)){

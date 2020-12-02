@@ -8,14 +8,34 @@ var refDescs;
 
 // End of declaration
 
-async function getData(url){
+function fileRead(file){
+  const reader = new FileReader();
+  reader.onload = fileLoad;
 
-  const response = await fetch(url);
-
-  return response.text();
+  reader.readAsText(file);
 }
 
-async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
+function fileLoad(event){
+  document.getElementById('fastaFileText').textContent = event.target.result;
+}
+
+document.querySelector('.custom-file-input').addEventListener('change', function(e){
+  if (e.target.files.length != 0){
+    let file = e.target.files[0]
+
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = file.name;
+
+    fileRead(e.target.files[0])
+    alert(file.name + " has been successfully loaded.");
+  }
+  else{
+    var nextSibling = e.target.nextElementSibling
+    nextSibling.innerText = "Choose file";
+  }
+})
+
+async function runTool(fasta, fastaFile, num, genome, outputid){
   hideAllAlerts();
 
   var input = document.getElementById(fasta).value;

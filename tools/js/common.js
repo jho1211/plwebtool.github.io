@@ -3,9 +3,8 @@ function copyOutput(id){
   document.execCommand("copy");
 }
 
-function downloadOutput(buttonID, id){
+function downloadOutput(buttonID, id, filename){
   var text = document.getElementById(id).value;
-  var filename = "btrfs-output.txt"
 
   var blob = new Blob([text], {type: "text/plain"});
   var url = window.URL.createObjectURL(blob);
@@ -52,17 +51,6 @@ function showAlert(id){
   }
 }
 
-function fileRead(file){
-  const reader = new FileReader();
-  reader.onload = fileLoad;
-
-  reader.readAsText(file);
-}
-
-function fileLoad(event){
-  document.getElementById('fastaFileText').textContent = event.target.result;
-}
-
 function nthElements(arr, start, step){
   var newArr = [];
 
@@ -73,19 +61,9 @@ function nthElements(arr, start, step){
   return newArr;
 }
 
-// Changes the label of the file input to match the name of the document
-document.querySelector('.custom-file-input').addEventListener('change', function(e){
-  if (e.target.files.length != 0){
-    let file = e.target.files[0]
+async function getData(url){
 
-    var nextSibling = e.target.nextElementSibling
-    nextSibling.innerText = file.name;
+  const response = await fetch(url);
 
-    fileRead(e.target.files[0])
-    alert(file.name + " has been successfully loaded.");
-  }
-  else{
-    var nextSibling = e.target.nextElementSibling
-    nextSibling.innerText = "Choose file";
-  }
-})
+  return response.text();
+}
