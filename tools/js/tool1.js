@@ -16,6 +16,8 @@ async function getData(url){
 }
 
 async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
+  hideAllAlerts();
+
   var input = document.getElementById(fasta).value;
   var fileInput = document.getElementById(fastaFile).files;
   var max = parseInt(document.getElementById(numTRFs).value);

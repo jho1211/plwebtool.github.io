@@ -11,6 +11,12 @@ function hasHidden(id){
   return document.getElementById(id).hasAttribute("hidden");
 }
 
+function hideAllAlerts(){
+  hideAlert('successAlert');
+  hideAlert('loadAlert');
+  hideAlert('errorAlert');
+}
+
 function hideAlert(id){
   document.getElementById(id).setAttribute('hidden', 'true')
 }
