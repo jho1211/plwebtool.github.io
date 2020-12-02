@@ -52,6 +52,8 @@ async function runTool(fasta, fileInput, limit, outputid){
   showAlert("successAlert");
 
   document.getElementById(outputid).value = output;
+
+  enableButton("download");
 }
 
 function isDRNA(seq, ref){
