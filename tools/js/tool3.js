@@ -29,7 +29,7 @@ function sampleFileLoad(event){
 
 function refFileLoad(event){
   event.target.result.replace(/\r/g, "\n");
-  
+
   document.getElementById('refInputText').textContent = event.target.result;
   console.log(event.target.result);
 }
@@ -131,7 +131,7 @@ function runTool(sample, ref, th, lim){
   var refSeqs = nthElements(refArray, 1, 2);
 
   // Filter for ref sequences with > #threshold
-  var relevantRefSeqs = filterThreshold(refSeqs, refDescs, th)
+  var relevantRefSeqs = filterThreshold(refSeqs, refDescs, threshold)
 
   // Sort the relevantRefSeqs for binary search
   relevantRefSeqs.sort();
@@ -148,7 +148,7 @@ function runTool(sample, ref, th, lim){
   return null;
 }
 
-function findClean(seqs, descs, ref){
+function findClean(seqs, descs, ref, limit){
   var res = [];
 
   // Iterate through each sample sequence and binary search for the sequence in the reference
@@ -177,7 +177,7 @@ function hitNumber(desc){
   return parseInt(desc.substring(actualIndex, desc.length));
 }
 
-function filterThreshold(seqs, descs, treshold){
+function filterThreshold(seqs, descs, threshold){
   // Filter for ref sequences that contain > #threshold by checking their hit number
   var res = []
 
