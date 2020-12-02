@@ -21,7 +21,7 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   var max = parseInt(document.getElementById(numTRFs).value);
   var output;
 
-  showLoad();
+  showAlert("loadAlert");
 
   if (max == -1 || max == 0 || isNaN(max)){
     max = Infinity;
@@ -39,7 +39,7 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   if (input == ""){
     if (fileInput.length == 0){
 
-      showError();
+      showAlert("errorAlert");
       hideAlert("loadAlert");
 
       return undefined;
@@ -58,7 +58,7 @@ async function runTool(fasta, fastaFile, numTRFs, genome, outputid){
   document.getElementById(outputid).value = output;
 
   hideAlert('loadAlert');
-  showSuccess();
+  showAlert("successAlert");
 
   return undefined;
 }

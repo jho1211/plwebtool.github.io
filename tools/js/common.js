@@ -7,29 +7,17 @@ function clearInput(id){
   document.getElementById(id).value = "";
 }
 
+function hasHidden(id){
+  return document.getElementById(id).hasAttribute("hidden");
+}
+
 function hideAlert(id){
   document.getElementById(id).setAttribute('hidden', 'true')
 }
 
-function isHidden(id){
-  return document.getElementById(id).hasAttribute('hidden')
-}
-
-function showSuccess(){
-  if (isHidden('successAlert')){
-    hideAlert('successAlert');
-  }
-}
-
-function showError(){
-  if (isHidden('errorAlert')){
-    hideAlert('errorAlert');
-  }
-}
-
-function showLoad(){
-  if (isHidden('loadAlert')){
-    hideAlert('loadAlert');
+function showAlert(id){
+  if (hasHidden(id)){
+    document.getElementById(id).removeAttribute("hidden");
   }
 }
 

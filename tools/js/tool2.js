@@ -1,10 +1,3 @@
-async function getData(url){
-
-  const response = await fetch(url);
-
-  return response.text();
-}
-
 function nthElements(arr, start, step){
   var newArr = [];
 
@@ -15,6 +8,13 @@ function nthElements(arr, start, step){
   return newArr;
 }
 
+async function getData(url){
+
+  const response = await fetch(url);
+
+  return response.text();
+}
+
 var reference;
 
 async function runTool(fasta, fileInput, limit, outputid){
@@ -22,7 +22,7 @@ async function runTool(fasta, fileInput, limit, outputid){
   var files = document.getElementById(fileInput).files;
   var max = parseInt(document.getElementById(limit).value);
 
-  showLoad();
+  showAlert("loadAlert");
 
   if (max == -1 || max == 0 || isNaN(max)){
     max = Infinity;
@@ -31,7 +31,7 @@ async function runTool(fasta, fileInput, limit, outputid){
   if (input == ""){
     if (files.length == 0){
 
-      showError();
+      showAlert("errorAlert");
       hideAlert("loadAlert");
 
       return undefined;
@@ -49,7 +49,7 @@ async function runTool(fasta, fileInput, limit, outputid){
   var output = generateDRNA(input, max)
   hideAlert("loadAlert");
 
-  showSuccess();
+  showAlert("successAlert");
 
   document.getElementById(outputid).value = output;
 }
