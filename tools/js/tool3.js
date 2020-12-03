@@ -8,30 +8,20 @@ document.getElementById('sampleInput').addEventListener('change', function(e){
 
 function refFileRead(file){
   const reader = new FileReader();
-  reader.onload = refFileLoad;
+  reader.onload = function(){
+    document.getElementById('refInputText').textContent = reader.result;
+  };
 
   reader.readAsText(file);
 }
 
 function sampleFileRead(file){
   const reader = new FileReader();
-  reader.onload = sampleFileLoad;
+  reader.onload = function(){
+    document.getElementById('sampleInputText').textContent = reader.result;
+  };
 
   reader.readAsText(file);
-}
-
-function sampleFileLoad(event){
-  event.target.result.replace(/\r/g, "\n");
-
-  document.getElementById('sampleInputText').textContent = event.target.result;
-  console.log(event.target.result);
-}
-
-function refFileLoad(event){
-  event.target.result.replace(/\r/g, "\n");
-
-  document.getElementById('refInputText').textContent = event.target.result;
-  console.log(event.target.result);
 }
 
 function refFileUpload(e){
