@@ -40,7 +40,7 @@ async function runTool(fasta, fastaFile, num, genome, outputid){
 
   var input = document.getElementById(fasta).value;
   var fileInput = document.getElementById(fastaFile).files;
-  var max = parseInt(document.getElementById(numTRFs).value);
+  var max = parseInt(document.getElementById(num).value);
   var output;
 
   showAlert("loadAlert");
