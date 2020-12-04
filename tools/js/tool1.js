@@ -8,6 +8,7 @@ var refDescs;
 
 // End of declaration
 
+// Read the text contained in the text file.
 function fileRead(file){
   const reader = new FileReader();
   reader.onload = fileLoad;
@@ -15,21 +16,26 @@ function fileRead(file){
   reader.readAsText(file);
 }
 
+// Store the text from the file somewhere hidden for later use
 function fileLoad(event){
   document.getElementById('fastaFileText').textContent = event.target.result;
 }
 
+// Detect when the user uploads the file and perform some operations
 document.querySelector('.custom-file-input').addEventListener('change', function(e){
   if (e.target.files.length != 0){
     let file = e.target.files[0]
 
+    // Change the label of the file input box to match the name of file uploaded
     var nextSibling = e.target.nextElementSibling
     nextSibling.innerText = file.name;
 
+    // Read the file and tell the user it was successful
     fileRead(e.target.files[0])
     alert(file.name + " has been successfully loaded.");
   }
   else{
+    // If the user doesn't upload a file, nothing to do
     var nextSibling = e.target.nextElementSibling
     nextSibling.innerText = "Choose file";
   }
@@ -43,12 +49,15 @@ async function runTool(fasta, fastaFile, num, genome, outputid){
   var max = parseInt(document.getElementById(num).value);
   var output;
 
+  // Tell the user we are running the program
   showAlert("loadAlert");
 
-  if (max == -1 || max == 0 || isNaN(max)){
+  // If max value is not properly formatted, default to no limit
+  if (max == -1 || max == 0 || Number.isNaN(max)){
     max = Infinity;
   }
 
+  // Fetch the tRNA database as text from a host
   try{
     var fileName = document.getElementById(genome).value;
 
@@ -58,6 +67,7 @@ async function runTool(fasta, fastaFile, num, genome, outputid){
     alert('Species not implemented yet.');
   }
 
+  // If no input detected, throw an error
   if (input == ""){
     if (fileInput.length == 0){
 
@@ -93,23 +103,26 @@ function binarySearch(seq){
   let i = -1;
   var found = false;
 
+  // Keep looking through the tRNA sequences until none remain or sequence found
   while ((i == -1) && (first <= last)){
     var mid = Math.floor((first + last) / 2);
 
+    // Look at middle element of the list
     if (refSeqs[mid].includes(seq)){
       i = mid;
       found = true;
     }
-
+    // Search the left half of the list
     else if (seq < refSeqs[mid]){
       last = mid - 1
     }
-
+    // Search the right half of the list
     else{
       first = mid + 1
     }
   }
 
+  // If we find a tRF, return the position where it was found in the list
   if (found){
     return mid;
   }
@@ -118,6 +131,7 @@ function binarySearch(seq){
   }
 }
 
+// Generate the subsequences for a given sequence
 function generateSubsequences(seq){
   var seq_ignore_first = seq.slice(1);
   var seq_ignore_first_two = seq.slice(2);
@@ -128,21 +142,22 @@ function generateSubsequences(seq){
   return [seq, seq_ignore_first, seq_ignore_first_two, seq_ignore_last_two, seq_ignore_last, seq_ignore_first_last];
 }
 
+// Returns the name of the tRF the sequence corresponds to
 function trfName(desc){
 
   start = desc.indexOf('tRNA');
   end = desc.indexOf(' ');
 
-  // Returns the name of the tRF the sequence corresponds to
   return desc.slice(start, end)
 }
 
+/* Search for the seq in the reference text
+   Return the name of the tRF it corresponds to if found */
 function searchRef(seq){
-  /* Search for the seq in the reference text
-     Return the name of the tRF it corresponds to if found */
-
   let result = binarySearch(seq)
 
+  // If the search returns a number, we return what tRF it corresponds to
+  // Otherwise, we return false
   if (typeof(result) == "number"){
     return trfName(refDescs[result])
   }
@@ -152,11 +167,14 @@ function searchRef(seq){
 }
 
 function isTRF(seq){
+  // Generate subsequences of sequence
   var subseqs = generateSubsequences(seq)
 
+  // Search for each subsequence in the tRNA db
   for (var i = 0; i < subseqs.length; i++){
     var result = searchRef(subseqs[i]);
 
+    // If subsequence matches, we return the match
     if (typeof(result) == "string"){
       return result + ', sequence matched: ' + subseqs[i];
     }
@@ -166,17 +184,21 @@ function isTRF(seq){
 }
 
 function findTRFs(fasta, limit){
+  // Convert the FASTA text to a list of lines from the text
   var fastaArray = fasta.split('\n');
 
+  // Filter for the headers and the sequences and store in separate lists
   var descs = nthElements(fastaArray, 0, 2);
   var seqs = nthElements(fastaArray, 1, 2);
 
+  // Do the same for the tRNA database text
   var refArray = ref.split('\n');
   refDescs = nthElements(refArray, 0, 2);
   refSeqs = nthElements(refArray, 1, 2);
 
   var newFastaArray = [];
 
+  // Look through each sequence in the sample and search for it in the tRNA db
   for (var i = 0; i < seqs.length; i++){
 
     if ((newFastaArray.length / 2) == limit){
