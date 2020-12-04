@@ -132,6 +132,8 @@ function runTool(sample, ref, th, lim){
 
   document.getElementById('fastaOutput').value = output;
 
+  enableButton('download');
+
   hideAllAlerts();
   showAlert("successAlert");
 
