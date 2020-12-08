@@ -7,8 +7,10 @@ function fileRead(file){
   reader.readAsText(file);
 }
 
-function fileLoad(event){
-  document.getElementById('fastaFileText').textContent = event.target.result;
+// Read the text contained in the text file.
+async function fileRead(file){
+  var text = await file.text();
+  document.getElementById('fastaFileText').textContent = text;
 }
 
 document.querySelector('.custom-file-input').addEventListener('change', function(e){

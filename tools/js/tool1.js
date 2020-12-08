@@ -9,16 +9,9 @@ var refDescs;
 // End of declaration
 
 // Read the text contained in the text file.
-function fileRead(file){
-  const reader = new FileReader();
-  reader.onload = fileLoad;
-
-  reader.readAsText(file);
-}
-
-// Store the text from the file somewhere hidden for later use
-function fileLoad(event){
-  document.getElementById('fastaFileText').textContent = event.target.result;
+async function fileRead(file){
+  var text = await file.text();
+  document.getElementById('fastaFileText').textContent = text;
 }
 
 // Detect when the user uploads the file and perform some operations
