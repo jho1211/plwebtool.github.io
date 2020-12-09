@@ -72,15 +72,7 @@ function isDRNA(seq, ref){
   /* Returns false if sequence is not a dRNA/CdRNA.
   Returns the matching sequence if it is a match */
 
-  if (seq.length == 12){
-    return ref.includes(seq);
-  }
-  else if (seq.length == 13 && seq[0] == "C"){
-    return ref.includes(seq);
-  }
-  else{
-    return false;
-  }
+  return ((seq.length == 12) || (seq.length == 13 && seq[0] == "C"))
 }
 
 function generateDRNA(input, max){
